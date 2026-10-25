@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPP Assist — polityka prywatności</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; color: #10233a; background: #f5f9fc; }
+  h1 { color: #1f5f8b; }
+  h2 { margin-top: 1.6em; font-size: 1.15em; }
+  .meta { color: #6e8296; font-size: .9em; }
+  td, th { text-align: left; vertical-align: top; padding: 4px 8px; border-bottom: 1px solid #dde7ef; }
+  table { border-collapse: collapse; width: 100%; font-size: .95em; }
+</style>
+</head>
+<body>
+<h1>OPP Assist — polityka prywatności</h1>
+<p class="meta">Wydawca: LeoKodum · kontakt: leokodum@mail.com · obowiązuje od 25 października 2026 r.</p>
+
+<p>OPP Assist pomaga kierowcy pilnować średniej prędkości na odcinkowym pomiarze prędkości (OPP). Aplikacja nie ma kont użytkowników, logowania, reklam ani bibliotek analitycznych. Poniżej opisujemy dokładnie, jakie dane przetwarza i dlaczego.</p>
+
+<h2>Lokalizacja (GPS)</h2>
+<p>Aplikacja korzysta z dokładnej lokalizacji, żeby mierzyć przejechaną drogę i czas, wykrywać zapamiętane odcinki pomiarowe oraz dawać sygnał przed wjazdem na odcinek. Lokalizacja jest używana także wtedy, gdy ekran jest wygaszony — działa wtedy usługa z widocznym powiadomieniem „OPP Assist”, którą można w każdej chwili wyłączyć przyciskiem „Zakończ”. Historia przejazdów, trasy ani prędkości <strong>nie są wysyłane</strong> nigdzie — pomiar odbywa się w telefonie.</p>
+
+<h2>Dane zapisywane w telefonie</h2>
+<p>Zapamiętane odcinki (współrzędne początku i końca, kierunek, długość, wybrany limit prędkości) oraz ustawienia aplikacji. Znikają po odinstalowaniu aplikacji lub wyczyszczeniu jej danych.</p>
+
+<h2>Dane wysyłane na serwer</h2>
+<table>
+<tr><th>Co</th><th>Kiedy i po co</th></tr>
+<tr><td>Współrzędne odcinka OPP (początek, koniec), kierunek, długość, limit, wersja aplikacji, anonimowy identyfikator kierowcy</td><td>Tylko gdy użytkownik wybierze „Wyślij do wspólnej bazy” — żeby inni kierowcy mogli pobrać odcinki w swojej okolicy. Identyfikator jest losowy, nie jest powiązany z telefonem, kontem ani osobą; służy wyłącznie do liczenia, ilu różnych kierowców zgłosiło dany odcinek.</td></tr>
+<tr><td>Pozycja (w przybliżeniu do miejsca, w którym jesteś)</td><td>Przy pobieraniu odcinków z okolicy wysyłane jest zapytanie z bieżącą pozycją; serwer zwraca odcinki w promieniu do 150 km. Pozycja z zapytania nie jest zapisywana.</td></tr>
+<tr><td>Twoje zapamiętane odcinki, chronione tajnym kodem synchronizacji</td><td>Synchronizacja między Twoimi telefonami. Dostęp do nich ma tylko ten, kto zna kod (jest wyświetlany w aplikacji w „Synchronizacja telefonów”). Kod jest losowy i nie identyfikuje osoby.</td></tr>
+</table>
+<p>Serwer to usługa bazodanowa Supabase z centrum danych w Unii Europejskiej (Irlandia). Transmisja jest szyfrowana (HTTPS). Dane nie są sprzedawane ani przekazywane innym podmiotom.</p>
+
+<h2>Bluetooth i Android Auto</h2>
+<p>Uprawnienie „urządzenia w pobliżu” służy wyłącznie do wykrycia, że telefon połączył się z samochodem — aplikacja wyświetla wtedy pytanie, czy ją uruchomić. Nazwa samochodu nie jest nigdzie zapisywana ani wysyłana. W Android Auto aplikacja pokazuje stan pomiaru na ekranie samochodu.</p>
+
+<h2>Usuwanie danych</h2>
+<p>Odcinki usuniesz w aplikacji (menu ⋮ → Zarządzaj odcinkami); usunięcie dociera też do Twoich połączonych telefonów. Odcinki wysłane do wspólnej bazy są anonimowe — jeśli chcesz usunąć konkretny wpis albo wszystkie dane powiązane z Twoim kodem synchronizacji, napisz na leokodum@mail.com (podaj kod synchronizacji lub współrzędne odcinka).</p>
+
+<h2>Dzieci</h2>
+<p>Aplikacja jest przeznaczona dla kierowców i nie jest kierowana do dzieci.</p>
+
+<h2>Zmiany</h2>
+<p>Jeśli polityka się zmieni, nowa wersja pojawi się na tej stronie z nową datą obowiązywania.</p>
+</body>
+</html>
