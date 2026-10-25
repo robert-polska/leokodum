@@ -73,3 +73,7 @@ h2 { font-size: 30px; margin: 0 0 24px; }
   .card { flex-direction: column; gap: 12px; }
   nav a { margin-left: 14px; }
 }
+
+.contact { color: var(--muted); font-size: 18px; margin: 0; }
+.mail { display: inline-block; margin-top: 8px; font-size: 22px; font-weight: 600; color: var(--primary); text-decoration: none; }
+.mail:hover { text-decoration: underline; }
