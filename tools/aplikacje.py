@@ -47,8 +47,8 @@ APLIKACJE = [
         "slug": "mecz", "nazwa": "Mecz", "tag": "Dla rodziców i trenerów", "ikona": "ikona-mecz.png?v=2",
         "status": "sprawdzanie", "poziome": True,
         "zrzuty": zrzuty("mecz/sklep", [
-            ("1-tablica.png", "Tablica wyniku w filmie"), ("2-gol.png", "Wynik miga po bramce"),
-            ("3-przerwa.png", "Zatrzymany zegar w przerwie"),
+            ("1-nagrywanie.png", "Nagrywanie z przyciskami GOL i zegarem"), ("2-gol.png", "Po bramce: wynik miga, można cofnąć"),
+            ("3-przerwa.png", "Zatrzymany zegar w przerwie"), ("4-gotowy-film.png", "Gotowy film z tablicą"),
         ]),
         "krotko": "Nagrywanie meczów telefonem z tablicą wyniku i czasem gry od razu w filmie.",
         "wstep": "Nagrywasz mecz telefonem, a nazwy drużyn, wynik i czas gry są wypalane w filmie na żywo. Po meczu nie trzeba nic montować.",
