@@ -78,3 +78,41 @@ h2 { font-size: 30px; margin: 0 0 24px; }
 .contact + .contact { margin-top: 14px; }
 .mail { display: inline-block; margin-top: 8px; font-size: 22px; font-weight: 600; color: var(--primary); text-decoration: none; }
 .mail:hover { text-decoration: underline; }
+
+/* karty aplikacji jako linki do podstron */
+a.card { color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.card .more { margin-top: 10px; color: var(--primary); font-weight: 600; font-size: 15px; }
+
+/* podstrony aplikacji */
+.app-hero { padding: 32px 0 8px; }
+.back { display: inline-block; margin-bottom: 20px; color: var(--muted); text-decoration: none; font-size: 15px; }
+.back:hover { color: var(--ink); }
+.app-head { display: flex; gap: 24px; align-items: center; }
+.app-ico { width: 128px; height: 128px; border-radius: 30px; flex: none; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.app-head h1 { margin-bottom: 10px; }
+.app-head .lead { margin: 0; }
+.status { margin-top: 26px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--card);
+  display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.status p { margin: 0; color: var(--muted); flex: 1 1 320px; }
+.muted { color: var(--muted); margin: 0; }
+.shots-sec { padding-top: 32px; }
+.shots { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+.shots a { flex: none; scroll-snap-align: start; }
+.shots img { display: block; width: 216px; height: 384px; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+.video { position: relative; aspect-ratio: 16 / 9; max-width: 760px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.feats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.feat { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+.feat h2 { font-size: 21px; margin: 0 0 10px; }
+.feat ul { margin: 0; padding-left: 20px; color: var(--muted); }
+.feat li { margin: 6px 0; }
+.feat strong { color: var(--ink); }
+.links a { margin-right: 18px; }
+
+@media (max-width: 760px) {
+  .app-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .app-ico { width: 96px; height: 96px; border-radius: 24px; }
+  .feats { grid-template-columns: 1fr; }
+  .shots img { width: 180px; height: 320px; }
+}
