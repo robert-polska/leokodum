@@ -168,7 +168,7 @@ APLIKACJE = [
         "wstep": "Ochrona rodzicielska, która blokuje cały internet na telefonie dziecka, także udostępnianie go przez hotspot. Odblokować może tylko rodzic, wpisując PIN na tym telefonie.",
         "zrzuty": zrzuty("kids-locknet/sklep", [
             ("1-zablokowany.png", "Internet zablokowany"), ("2-pin.png", "Wpisywanie PIN-u"),
-            ("3-czas.png", "Wybór czasu odblokowania"), ("4-odblokowany.png", "Internet odblokowany"),
+            ("3-czas.png", "Wybór czasu odblokowania"), ("4-otwarta.png", "Internet odblokowany"),
         ]),
         "sekcje": [
             ("Jak to działa", [
