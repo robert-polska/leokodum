@@ -45,7 +45,11 @@ APLIKACJE = [
     },
     {
         "slug": "mecz", "nazwa": "Mecz", "tag": "Dla rodziców i trenerów", "ikona": "ikona-mecz.png?v=2",
-        "status": "wewnetrzny",
+        "status": "sprawdzanie", "poziome": True,
+        "zrzuty": zrzuty("mecz/sklep", [
+            ("1-tablica.png", "Tablica wyniku w filmie"), ("2-gol.png", "Wynik miga po bramce"),
+            ("3-przerwa.png", "Zatrzymany zegar w przerwie"),
+        ]),
         "krotko": "Nagrywanie meczów telefonem z tablicą wyniku i czasem gry od razu w filmie.",
         "wstep": "Nagrywasz mecz telefonem, a nazwy drużyn, wynik i czas gry są wypalane w filmie na żywo. Po meczu nie trzeba nic montować.",
         "sekcje": [
@@ -163,7 +167,7 @@ APLIKACJE = [
     },
     {
         "slug": "kids-locknet", "nazwa": "Kids LockNet", "tag": "Dla rodziców", "ikona": "ikona-kidslocknet.png?v=1",
-        "status": "sprawdzanie", "film": "GIfikOUxhIA",
+        "status": "test", "film": "GIfikOUxhIA",
         "krotko": "Blokada internetu i hotspotu na telefonie dziecka, odblokowanie tylko PIN-em rodzica.",
         "wstep": "Ochrona rodzicielska, która blokuje cały internet na telefonie dziecka, także udostępnianie go przez hotspot. Odblokować może tylko rodzic, wpisując PIN na tym telefonie.",
         "zrzuty": zrzuty("kids-locknet/sklep", [

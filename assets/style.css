@@ -100,6 +100,7 @@ a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .shots { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
 .shots a { flex: none; scroll-snap-align: start; }
 .shots img { display: block; width: 216px; height: 384px; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+.shots.poziome img { width: 384px; height: 216px; border-radius: 12px; }
 .video { position: relative; aspect-ratio: 16 / 9; max-width: 760px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .feats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -115,4 +116,5 @@ a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
   .app-ico { width: 96px; height: 96px; border-radius: 24px; }
   .feats { grid-template-columns: 1fr; }
   .shots img { width: 180px; height: 320px; }
+  .shots.poziome img { width: 300px; height: 169px; }
 }
