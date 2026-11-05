@@ -33,16 +33,18 @@ def galeria(app):
         <p class="muted">Zrzuty ekranu pojawią się tu wkrótce.</p>
       </div>
     </section>"""
-    # zrzuty poziome (np. kadr filmu 16:9) zamiast pionowych z telefonu
+    # zrzuty poziome (np. kadr filmu 16:9) albo kwadratowe (rozłożony Fold) zamiast pionowych z telefonu
     poziome = app.get("poziome", False)
-    w, h = (480, 270) if poziome else (270, 480)
+    kwadratowe = app.get("kwadratowe", False)
+    w, h = (480, 270) if poziome else (400, 400) if kwadratowe else (270, 480)
+    klasa = " poziome" if poziome else " kwadratowe" if kwadratowe else ""
     imgs = "\n".join(
         f'          <a href="../{p}" target="_blank" rel="noopener"><img src="../{p}" alt="{e(opis)}" width="{w}" height="{h}" loading="lazy"></a>'
         for p, opis in app["zrzuty"])
     return f"""    <section class="sec shots-sec">
       <div class="wrap">
         <h2>Zrzuty ekranu</h2>
-        <div class="shots{' poziome' if poziome else ''}">
+        <div class="shots{klasa}">
 {imgs}
         </div>
       </div>
@@ -88,7 +90,7 @@ def strona(app):
 <title>{e(app['nazwa'])} — LeoKodum</title>
 <meta name="description" content="{e(app['krotko'])}">
 <link rel="icon" type="image/png" href="../assets/favicon.png">
-<link rel="stylesheet" href="../assets/style.css?v=4">
+<link rel="stylesheet" href="../assets/style.css?v=5">
 </head>
 <body>
 

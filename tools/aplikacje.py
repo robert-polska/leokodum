@@ -143,12 +143,19 @@ APLIKACJE = [
     },
     {
         "slug": "niko-19", "nazwa": "Niko 19", "tag": "Dla młodych sportowców", "ikona": "ikona-torpedo.png?v=3",
-        "status": "przygotowanie",
-        "krotko": "Codzienne ćwiczenia dla dzieci z diamencikami, rangami i awatarami.",
-        "wstep": "Codzienny trening dla młodych sportowców. Krótkie ćwiczenia jedno po drugim, a za każde zaliczone dziecko zbiera diamenciki, rangi i nowe awatary.",
+        "status": "wewnetrzny", "kwadratowe": True,
+        "krotko": "Codzienny trening dla dzieci z diamencikami, rangami, testem sprawności i radami o jedzeniu sportowca.",
+        "wstep": "Codzienny trening dla młodych sportowców. Krótkie ćwiczenia jedno po drugim, pokazane przez trójwymiarową postać Niko. Za każdy trening dziecko zbiera diamenciki, rangi i nowe awatary, a co dwa tygodnie sprawdza w teście sprawności, ile już potrafi.",
+        "zrzuty": zrzuty("niko-19/zrzuty", [
+            ("1-start.png", "Ekran główny: ranga, seria dni i cel tygodnia"),
+            ("2-test-sprawnosci.png", "Test sprawności z wykresem postępu"),
+            ("3-nowy-rekord.png", "Nowy rekord w przysiadach"),
+            ("4-jedzenie.png", "Jedzenie sportowca"),
+        ]),
         "sekcje": [
             ("Trening krok po kroku", [
                 "Aplikacja prowadzi przez kolejne ćwiczenia: przysiady, pompki, deski, wykroki, skoki, mostki i biegi bokiem.",
+                "Każde ćwiczenie pokazuje postać Niko w trójwymiarowej grafice, więc od razu widać, jak je zrobić.",
                 "Przy każdym ćwiczeniu odliczanie czasu i podpowiedź, co będzie dalej.",
                 "Dodatkowy trening tego samego dnia też się liczy, za połowę diamencików.",
             ]),
@@ -157,10 +164,20 @@ APLIKACJE = [
                 "Rangi do zdobycia i cel tygodnia.",
                 "Awatary do odblokowania za zebrane diamenciki.",
             ]),
+            ("Test sprawności", [
+                "Co 14 dni krótki test: przysiady i pompki na kolanach w 30 sekund oraz deska na czas.",
+                "Rekordy i wykres ostatnich wyników pokazują postęp.",
+                "Dziecko porównuje się tylko ze sobą, bez rankingów i porównań z innymi.",
+            ]),
+            ("Jedzenie sportowca", [
+                "Proste zasady: zdrowy talerz, regularne posiłki, woda, co zjeść przed treningiem i po nim.",
+                "Ogólne zalecenia oparte na rekomendacjach żywieniowych dla dzieci, bez liczenia kalorii, odchudzania i suplementów.",
+                "Osobna karta z informacjami dla rodzica.",
+            ]),
             ("Dla rodzica", [
                 "Kilku zawodników na jednym telefonie, każdy ze swoimi wynikami.",
-                "Działa w całości na telefonie, bez internetu i bez kont.",
-                "Bez reklam.",
+                "Kopia postępu do pliku, którą można wczytać na innym telefonie. Wczytanie wymaga PIN-u rodzica.",
+                "Działa w całości na telefonie, bez internetu i bez kont. Bez reklam.",
             ]),
         ],
         "uwaga": "Ćwicz w bezpiecznym miejscu, z wolną przestrzenią wokół. Przy bólu lub urazie przerwij trening.",
