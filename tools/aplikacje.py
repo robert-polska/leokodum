@@ -17,6 +17,11 @@ APLIKACJE = [
         "slug": "opp-assist", "pakiet": "com.robsoft.oppassist", "nazwa": "OPP Assist", "tag": "Dla kierowców", "ikona": "ikona-opp.png?v=2",
         "status": "wewnetrzny",
         "krotko": "Pilnuje średniej prędkości na odcinkowym pomiarze prędkości.",
+        "zrzuty": zrzuty("opp-assist/sklep", [
+            ("1-ready.png", "Gotowy do jazdy, wybrany limit"), ("2-approach.png", "Sygnał przed odcinkiem"),
+            ("3-auto.png", "Pomiar: średnia i ile wolno jechać do końca"), ("4-over.png", "Średnia powyżej limitu"),
+            ("5-done.png", "Wynik po przejeździe"),
+        ]),
         "wstep": "Pilnuje Twojej średniej prędkości na odcinkowym pomiarze prędkości (OPP). Sam rozpoznaje znane odcinki, daje sygnał przed wjazdem i podpowiada, z jaką prędkością możesz jechać do końca odcinka.",
         "sekcje": [
             ("Uczy się Twoich odcinków", [
