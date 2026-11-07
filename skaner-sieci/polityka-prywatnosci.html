@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skaner Sieci — polityka prywatności</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; color: #10233a; background: #f5f9fc; }
+  h1 { color: #1f5f8b; }
+  h2 { margin-top: 1.6em; font-size: 1.15em; }
+  .meta { color: #6e8296; font-size: .9em; }
+  td, th { text-align: left; vertical-align: top; padding: 4px 8px; border-bottom: 1px solid #dde7ef; }
+  table { border-collapse: collapse; width: 100%; font-size: .95em; }
+  .wroc { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 20px; font-size: .95em; }
+  .wroc a { color: inherit; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; opacity: .8; }
+  .wroc a:hover { opacity: 1; }
+  .wroc.dol { margin: 32px 0 0; padding-top: 16px; border-top: 1px solid rgba(0,0,0,.12); }
+</style>
+</head>
+<body>
+<nav class="wroc"><a href="./">← O aplikacji</a><a href="../#aplikacje">Wszystkie aplikacje</a><a href="../">Strona główna</a></nav>
+<h1>Skaner Sieci — polityka prywatności</h1>
+<p class="meta">Wydawca: LeoKodum · kontakt: leokodum@mail.com · obowiązuje od 8 listopada 2026 r.</p>
+
+<p>Skaner Sieci pokazuje urządzenia w sieci lokalnej, sieci Wi-Fi w okolicy i stan połączenia z internetem. Aplikacja nie ma kont użytkowników, logowania, reklam ani bibliotek analitycznych. <strong>Wydawca nie zbiera żadnych danych</strong>: wszystko, co aplikacja ustali, zostaje w telefonie.</p>
+
+<h2>Skan sieci lokalnej</h2>
+<p>Aplikacja wysyła zapytania tylko do urządzeń w sieci, do której jest podłączony telefon (ping, połączenia z typowymi portami, zapytania mDNS, SSDP/UPnP, WS-Discovery, NetBIOS, BACnet i KNX). Z routera z włączonym UPnP odczytuje listę przekierowań portów — wyłącznie do odczytu, bez zmian w ustawieniach. Odczyt SNMP działa tylko wtedy, gdy sam go włączysz i podasz hasło (community). Aplikacja nie loguje się do urządzeń, nie zgaduje haseł i niczego w nich nie zapisuje.</p>
+<p>Skanuj tylko sieci, którymi zarządzasz albo na które masz zgodę właściciela.</p>
+
+<h2>Sprawdzenie połączenia z internetem</h2>
+<table>
+<tr><th>Co</th><th>Po co</th></tr>
+<tr><td>Ping do 1.1.1.1 i trasa do tego adresu</td><td>Pomiar opóźnień i strat oraz wykrycie podwójnego NAT lub CGNAT.</td></tr>
+<tr><td>Zapytania DNS (www.google.com i nieistniejąca nazwa w example.com)</td><td>Czy DNS działa i czy operator nie podmienia odpowiedzi.</td></tr>
+<tr><td>Zapytanie do api.ipify.org</td><td>Pokazanie publicznego adresu IP sieci. Ta usługa, jak każda strona WWW, widzi adres IP, z którego przychodzi zapytanie.</td></tr>
+</table>
+<p>Żadne wyniki skanu nie są dołączane do tych zapytań.</p>
+
+<h2>Lokalizacja</h2>
+<p>Android udostępnia listę sieci Wi-Fi w okolicy tylko aplikacjom ze zgodą na lokalizację. Skaner Sieci korzysta z tej zgody wyłącznie do listy sieci Wi-Fi. Nie odczytuje ani nie zapisuje położenia telefonu i nigdzie go nie wysyła.</p>
+
+<h2>Dane zapisywane w telefonie</h2>
+<p>Historia skanów (adresy IP i MAC, nazwy, producenci i typy urządzeń, otwarte porty, wykryte ryzyka), Twoje opisy urządzeń, lista urządzeń oznaczonych jako znane, zdarzenia czuwania i ustawienia. Raport PDF i lista CSV powstają w telefonie; trafiają gdzieś dalej tylko wtedy, gdy sam je udostępnisz.</p>
+
+<h2>Czuwanie i powiadomienia</h2>
+<p>Gdy włączysz czuwanie, Android co 15–60 minut uruchamia krótkie sprawdzenie sieci lokalnej i aplikacja powiadamia o nowych lub znikających urządzeniach. Zgoda na powiadomienia służy tylko do tego. Wyniki zostają w telefonie.</p>
+
+<h2>Usuwanie danych</h2>
+<p>Wszystkie dane usuniesz, czyszcząc dane aplikacji w ustawieniach Androida albo odinstalowując aplikację. Wydawca nie przechowuje żadnych danych z aplikacji, więc nie ma czego usuwać po jego stronie.</p>
+
+<h2>Dzieci</h2>
+<p>Aplikacja jest narzędziem dla dorosłych (domowników, administratorów i instalatorów) i nie jest kierowana do dzieci.</p>
+
+<h2>Zmiany</h2>
+<p>Jeśli polityka się zmieni, nowa wersja pojawi się na tej stronie z nową datą obowiązywania.</p>
+<nav class="wroc dol"><a href="./">← O aplikacji</a><a href="../#aplikacje">Wszystkie aplikacje</a><a href="../">Strona główna</a></nav>
+</body>
+</html>

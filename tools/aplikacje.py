@@ -267,6 +267,10 @@ APLIKACJE = [
         "slug": "skaner-sieci", "pakiet": "", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
         "status": "przygotowanie",
         "krotko": "Urządzenia w sieci, stan Wi-Fi, możliwe zagrożenia i raport PDF.",
+        "zrzuty": zrzuty("skaner-sieci/sklep", [
+            ("1-siec.png", "Urządzenia w sieci"), ("2-ryzyka.png", "Zagrożenia i zalecenia"),
+            ("3-wifi.png", "Sieci Wi-Fi i kanały"), ("4-zdrowie.png", "Zdrowie sieci"), ("5-czuwanie.png", "Czuwanie"),
+        ]),
         "wstep": "Pokazuje, co jest w Twojej sieci: urządzenia, ich nazwy i otwarte usługi. Sprawdza Wi-Fi, wskazuje możliwe zagrożenia i przygotowuje raport PDF.",
         "sekcje": [
             ("Urządzenia w sieci", [
