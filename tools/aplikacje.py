@@ -1,6 +1,6 @@
 """Treści podstron aplikacji LeoKodum (generator: tools/strony_aplikacji.py).
 status: test (test zamknięty, grupa testerów), sprawdzanie (u Google), wewnetrzny (testy
-wewnętrzne, lista e-mail), przygotowanie. Zrzuty: ścieżki od katalogu repo, 9:16."""
+wewnętrzne, lista e-mail), przygotowanie. pakiet: identyfikator w Google Play (strona /testuj/). Zrzuty: ścieżki od katalogu repo, 9:16."""
 
 GRUPA = "https://groups.google.com/g/testerzy-leokodum"
 MAIL = "leokodum@mail.com"
@@ -14,7 +14,7 @@ def zrzuty(katalog, pliki):
 
 APLIKACJE = [
     {
-        "slug": "opp-assist", "nazwa": "OPP Assist", "tag": "Dla kierowców", "ikona": "ikona-opp.png?v=2",
+        "slug": "opp-assist", "pakiet": "com.robsoft.oppassist", "nazwa": "OPP Assist", "tag": "Dla kierowców", "ikona": "ikona-opp.png?v=2",
         "status": "wewnetrzny",
         "krotko": "Pilnuje średniej prędkości na odcinkowym pomiarze prędkości.",
         "wstep": "Pilnuje Twojej średniej prędkości na odcinkowym pomiarze prędkości (OPP). Sam rozpoznaje znane odcinki, daje sygnał przed wjazdem i podpowiada, z jaką prędkością możesz jechać do końca odcinka.",
@@ -44,8 +44,8 @@ APLIKACJE = [
         "uwaga": "Bez reklam, bez kont i logowania. Średnia jest liczona z prędkości GPS, więc nie skacze przy słabym sygnale. Aplikacja nie zastępuje uwagi kierowcy: zawsze przestrzegaj przepisów i znaków drogowych.",
     },
     {
-        "slug": "mecz", "nazwa": "Mecz", "tag": "Dla rodziców i trenerów", "ikona": "ikona-mecz.png?v=2",
-        "status": "sprawdzanie", "poziome": True,
+        "slug": "mecz", "pakiet": "pl.leokodum.mecz", "nazwa": "Mecz", "tag": "Dla rodziców i trenerów", "ikona": "ikona-mecz.png?v=2",
+        "status": "test", "poziome": True,
         "zrzuty": zrzuty("mecz/sklep", [
             ("1-nagrywanie.png", "Nagrywanie z przyciskami GOL i zegarem"), ("2-gol.png", "Po bramce: wynik miga, można cofnąć"),
             ("3-przerwa.png", "Zatrzymany zegar w przerwie"), ("4-gotowy-film.png", "Gotowy film z tablicą"),
@@ -76,10 +76,10 @@ APLIKACJE = [
         "uwaga": "Najlepiej nagrywać w poziomie, z telefonem na statywie lub uchwycie.",
     },
     {
-        "slug": "kafelki", "nazwa": "Kafelki", "tag": "Dla przedszkolaków", "ikona": "ikona-kafelki.png?v=2",
+        "slug": "kafelki", "pakiet": "pl.leokodum.kafelki", "nazwa": "Kafelki", "tag": "Dla przedszkolaków", "ikona": "ikona-kafelki.png?v=2",
         "status": "test",
         "krotko": "Spokojna, wesoła gra dla dzieci w wieku 3–6 lat: kolory, kształty, liczenie i balony.",
-        "wstep": "Spokojna, wesoła gra dla dzieci w wieku 3–6 lat. Pięć trybów zabawy, a w każdym kafelki z buziami, które kołyszą się i mrugają. Tu nie da się przegrać.",
+        "wstep": "Spokojna, wesoła gra dla dzieci w wieku 3–6 lat. Pięć trybów zabawy, a w każdym kafelki z buziami, które kołyszą się i mrugają. Za postępy dziecko dostaje naklejki, rangi i awatary. Tu nie da się przegrać.",
         "zrzuty": zrzuty("kafelki/sklep", [
             ("1-menu-916.png", "Menu z pięcioma trybami"), ("2-lap-916.png", "Łap kafelki"),
             ("3-kolory-916.png", "Kolory"), ("4-liczenie-916.png", "Liczenie"),
@@ -93,8 +93,14 @@ APLIKACJE = [
                 "<strong>Kształty:</strong> kółko, kwadrat, trójkąt, gwiazdka i serduszko.",
                 "<strong>Balony:</strong> kolorowe balony z buziami do przebijania, zanim odlecą.",
             ]),
-            ("Nagrody", [
-                "Co 10 gwiazdek nowy poziom: „BRAWO!”, fanfara, fajerwerki i tańczący lew.",
+            ("Nagrody i postępy", [
+                "Za każdy nowy poziom „BRAWO!”, fanfara, fajerwerki, tańczący lew i naklejka do albumu (40 do zebrania).",
+                "10 rang do zdobycia, a za awans nowe awatary.",
+                "Rekord poziomu w każdym trybie zabawy.",
+            ]),
+            ("Coraz ciekawiej", [
+                "Trzy poziomy trudności na start: 🐢, 🐇 i 🚀.",
+                "Z kolejnymi poziomami dochodzą nowe kolory i kształty, pływające kafelki, złote kafelki za 3 gwiazdki, odliczanie, a w Balonach wiatr.",
                 "Gra sama dopasowuje tempo do dziecka.",
             ]),
             ("Dla rodzica", [
@@ -107,7 +113,7 @@ APLIKACJE = [
         "uwaga": "Polecenia głosowe korzystają z polskiego syntezatora mowy w telefonie.",
     },
     {
-        "slug": "test-iq", "nazwa": "Test IQ na wesoło", "tag": "Dla dzieci i dorosłych", "ikona": "ikona-testiq.png?v=1",
+        "slug": "test-iq", "pakiet": "pl.leokodum.testiq", "nazwa": "Test IQ na wesoło", "tag": "Dla dzieci i dorosłych", "ikona": "ikona-testiq.png?v=1",
         "status": "test",
         "krotko": "Łamigłówki ułożone jak w prawdziwym teście inteligencji, w trzech zeszytach wiekowych.",
         "wstep": "Łamigłówki ułożone jak w prawdziwym teście inteligencji. Każda dobra odpowiedź podnosi poziom trudności, a na końcu dostajesz wynik w skali IQ, krzywą wyników i profil zdolności.",
@@ -122,6 +128,11 @@ APLIKACJE = [
                 "<strong>Szkoła (7–15 lat):</strong> 15 zadań, 60 sekund na każde.",
                 "<strong>Dorośli:</strong> 20 zadań, 45 sekund na każde.",
                 "Szkoła i Dorośli mają osobne pytania, więc nic się między nimi nie powtarza.",
+            ]),
+            ("Rośnie razem z graczem", [
+                "Każdy zeszyt ma stopnie trudności: dobry wynik przenosi wyżej, dwie słabsze gry z rzędu obniżają stopień.",
+                "Aplikacja pamięta ostatnie pytania, więc w kolejnych grach rzadko się powtarzają.",
+                "Rangi za czas spędzony na łamigłówkach.",
             ]),
             ("Rodzaje zadań", [
                 "Ciągi liczb, matryce figur, analogie słowne i „co nie pasuje”.",
@@ -142,8 +153,8 @@ APLIKACJE = [
         "uwaga": "To zabawa inspirowana testami inteligencji. Wynik nie jest diagnozą ani prawdziwym pomiarem IQ.",
     },
     {
-        "slug": "niko-19", "nazwa": "Niko 19", "tag": "Dla młodych sportowców", "ikona": "ikona-torpedo.png?v=3",
-        "status": "wewnetrzny", "kwadratowe": True,
+        "slug": "niko-19", "pakiet": "pl.leokodum.niko19", "nazwa": "Niko 19", "tag": "Dla młodych sportowców", "ikona": "ikona-torpedo.png?v=3",
+        "status": "test", "kwadratowe": True,
         "krotko": "Codzienny trening dla dzieci z diamencikami, rangami, testem sprawności i radami o jedzeniu sportowca.",
         "wstep": "Codzienny trening dla młodych sportowców. Krótkie ćwiczenia jedno po drugim, pokazane przez trójwymiarową postać Niko. Za każdy trening dziecko zbiera diamenciki, rangi i nowe awatary, a co dwa tygodnie sprawdza w teście sprawności, ile już potrafi.",
         "zrzuty": zrzuty("niko-19/zrzuty", [
@@ -183,7 +194,7 @@ APLIKACJE = [
         "uwaga": "Ćwicz w bezpiecznym miejscu, z wolną przestrzenią wokół. Przy bólu lub urazie przerwij trening.",
     },
     {
-        "slug": "kids-locknet", "nazwa": "Kids LockNet", "tag": "Dla rodziców", "ikona": "ikona-kidslocknet.png?v=1",
+        "slug": "kids-locknet", "pakiet": "pl.leokodum.kidslocknet", "nazwa": "Kids LockNet", "tag": "Dla rodziców", "ikona": "ikona-kidslocknet.png?v=1",
         "status": "test", "film": "GIfikOUxhIA",
         "krotko": "Blokada internetu i hotspotu na telefonie dziecka, odblokowanie tylko PIN-em rodzica.",
         "wstep": "Ochrona rodzicielska, która blokuje cały internet na telefonie dziecka, także udostępnianie go przez hotspot. Odblokować może tylko rodzic, wpisując PIN na tym telefonie.",
@@ -199,8 +210,17 @@ APLIKACJE = [
                 "Po kilku błędnych próbach PIN-u wpisywanie jest czasowo blokowane.",
             ]),
             ("Hotspot pod kontrolą", [
-                "Próba włączenia hotspotu kończy się jego wyłączeniem i powiadomieniem.",
-                "Ponowna próba zasłania ekran i prosi o PIN.",
+                "Hotspot można zablokować razem z internetem albo osobno, gdy internet ma działać.",
+                "Próba włączenia hotspotu kończy się jego wyłączeniem i powiadomieniem, a ekran ustawień hotspotu prosi o PIN.",
+            ]),
+            ("Harmonogram", [
+                "Blokada w wybranych godzinach, np. na noc albo na czas lekcji.",
+                "Do wyboru: blokada internetu i hotspotu albo tylko hotspotu.",
+                "Zmiana daty i godziny w telefonie jest chroniona, więc nie da się w ten sposób przesunąć harmonogramu.",
+            ]),
+            ("Ochrona ustawień", [
+                "Ustawienia aplikacji są chronione PIN-em rodzica, także gdy internet jest odblokowany.",
+                "Po podaniu PIN-u ustawienia są dostępne przez 10 minut.",
             ]),
             ("Prywatność", [
                 "Bez chmury, kont i zdalnego sterowania.",
@@ -211,8 +231,8 @@ APLIKACJE = [
         "uwaga": "Blokadę da się obejść, np. przez tryb awaryjny lub reset telefonu. Zapomnianego PIN-u nie da się przywrócić. Podczas rozmów ekran pozostaje odsłonięty, a na nakładce jest przycisk połączenia alarmowego.",
     },
     {
-        "slug": "styl-jazdy", "nazwa": "Styl Jazdy", "tag": "Dla kierowców", "ikona": "ikona-styljazdy.png?v=1",
-        "status": "przygotowanie",
+        "slug": "styl-jazdy", "pakiet": "pl.leokodum.styljazdy", "nazwa": "Styl Jazdy", "tag": "Dla kierowców", "ikona": "ikona-styljazdy.png?v=1",
+        "status": "wewnetrzny",
         "krotko": "Ocena stylu jazdy kierowców w rodzinie lub firmie w skali 0–100.",
         "wstep": "Wybierz, kto jedzie, i ruszaj. Styl Jazdy ocenia przyspieszanie, hamowanie, zakręty, płynność i tempo, a potem porównuje kierowców w rodzinie lub firmie.",
         "sekcje": [
@@ -224,7 +244,11 @@ APLIKACJE = [
             ("Pomiary", [
                 "Przeciążenia na żywo i rekordy.",
                 "Pomiar 0–100 km/h z międzyczasami, tylko na zamkniętym terenie.",
-                "Odcinkowe pomiary prędkości: sygnał przed odcinkiem, średnia i ile wolno jechać do końca.",
+                "Odcinkowe pomiary prędkości: komunikat głosowy przed odcinkiem, duże cyfry średniej i ile wolno jechać do końca.",
+                "Po odcinku wynik zostaje na ekranie, a limit na odcinku można poprawić, jeśli się zmienił.",
+            ]),
+            ("Android Auto", [
+                "Ekran jazdy i odcinkowe pomiary prędkości na ekranie samochodu.",
             ]),
             ("Prywatność", [
                 "Wyniki zostają w telefonie.",
@@ -235,7 +259,7 @@ APLIKACJE = [
         "uwaga": "Wyniki pomiarów z telefonu są orientacyjne. Aplikacja będzie płatna w subskrypcji, z 7 dniami za darmo na start.",
     },
     {
-        "slug": "skaner-sieci", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
+        "slug": "skaner-sieci", "pakiet": "", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
         "status": "przygotowanie",
         "krotko": "Urządzenia w sieci, stan Wi-Fi, możliwe zagrożenia i raport PDF.",
         "wstep": "Pokazuje, co jest w Twojej sieci: urządzenia, ich nazwy i otwarte usługi. Sprawdza Wi-Fi, wskazuje możliwe zagrożenia i przygotowuje raport PDF.",

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zostań testerem — LeoKodum</title>
+<meta name="description" content="Sprawdź aplikacje LeoKodum przed premierą w Google Play. Dołącz do grupy testerów i pobierz aplikacje.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/style.css?v=8">
+<script>
+// Przeglądarka wbudowana w Facebooka/Messengera/Instagram nie zna logowania Google — przełącz do Chrome.
+(function () {
+  var ua = navigator.userAgent || "";
+  var wbudowana = /FBAN|FBAV|FB_IAB|FBIOS|Messenger|Instagram/i.test(ua);
+  if (!wbudowana) return;
+  document.documentElement.className += " wbudowana";
+  if (/Android/i.test(ua)) {
+    var cel = location.host + location.pathname;
+    location.href = "intent://" + cel + "#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=" + encodeURIComponent(location.href) + ";end";
+  }
+})();
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="../"><img src="../assets/lew.png" alt="" width="40" height="40"><span>LeoKodum</span></a>
+    <nav>
+      <a href="../#aplikacje">Aplikacje</a>
+      <a href="../#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="app-hero">
+    <div class="wrap">
+      <div class="chrome-info">
+        <p><strong>Otwórz tę stronę w Chrome.</strong> Przeglądarka w Facebooku nie widzi Twojego konta Google, więc dołączenie do testów się nie uda.</p>
+        <a class="btn" id="do-chrome" href="intent://leokodum.pl/testuj/#Intent;scheme=https;package=com.android.chrome;end">Otwórz w Chrome</a>
+        <p class="muted">Nie działa? Dotknij ⋮ w prawym górnym rogu i wybierz „Otwórz w przeglądarce”.</p>
+      </div>
+      <p class="eyebrow">Testy w Google Play</p>
+      <h1>Zostań testerem</h1>
+      <p class="lead">Sprawdź nasze aplikacje przed premierą. Potrzebny jest telefon z Androidem i konto Google. Testy są bezpłatne.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap steps">
+      <div class="step">
+        <span class="nr">1</span>
+        <div>
+          <h2>Dołącz do grupy testerów</h2>
+          <p>Otwórz grupę w Chrome, na swoim koncie Google, i kliknij „Dołącz do grupy”. Jeśli widzisz komunikat o braku dostępu, najpierw zaloguj się na konto Google.</p>
+          <a class="btn" href="https://groups.google.com/g/testerzy-leokodum" target="_blank" rel="noopener">Dołącz do grupy</a>
+        </div>
+      </div>
+      <div class="step">
+        <span class="nr">2</span>
+        <div>
+          <h2>Wybierz aplikację</h2>
+          <p>Przy wybranej aplikacji kliknij „Zostań testerem”, a potem „Pobierz ze Sklepu”. Gdy Sklep jeszcze jej nie pokazuje, odczekaj kilka minut po dołączeniu do grupy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="nr">3</span>
+        <div>
+          <h2>Korzystaj przez 14 dni</h2>
+          <p>Nie odinstalowuj aplikacji przez 14 dni. Uwagi i błędy wysyłaj na <a href="mailto:leokodum@mail.com">leokodum@mail.com</a>. Każda opinia bardzo nam pomaga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <h2>Aplikacje do testowania</h2>
+      <div class="t-list">
+        <div class="t-app">
+          <a href="../mecz/"><img src="../assets/ikona-mecz.png?v=2" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../mecz/">Mecz</a></h3><p>Nagrywanie meczów telefonem z tablicą wyniku i czasem gry od razu w filmie.</p></div>
+          <div class="t-btns"><a class="btn" href="https://play.google.com/apps/testing/pl.leokodum.mecz" target="_blank" rel="noopener">Zostań testerem</a><a class="btn ghost" href="https://play.google.com/store/apps/details?id=pl.leokodum.mecz" target="_blank" rel="noopener">Pobierz ze Sklepu</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../kafelki/"><img src="../assets/ikona-kafelki.png?v=2" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../kafelki/">Kafelki</a></h3><p>Spokojna, wesoła gra dla dzieci w wieku 3–6 lat: kolory, kształty, liczenie i balony.</p></div>
+          <div class="t-btns"><a class="btn" href="https://play.google.com/apps/testing/pl.leokodum.kafelki" target="_blank" rel="noopener">Zostań testerem</a><a class="btn ghost" href="https://play.google.com/store/apps/details?id=pl.leokodum.kafelki" target="_blank" rel="noopener">Pobierz ze Sklepu</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../test-iq/"><img src="../assets/ikona-testiq.png?v=1" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../test-iq/">Test IQ na wesoło</a></h3><p>Łamigłówki ułożone jak w prawdziwym teście inteligencji, w trzech zeszytach wiekowych.</p></div>
+          <div class="t-btns"><a class="btn" href="https://play.google.com/apps/testing/pl.leokodum.testiq" target="_blank" rel="noopener">Zostań testerem</a><a class="btn ghost" href="https://play.google.com/store/apps/details?id=pl.leokodum.testiq" target="_blank" rel="noopener">Pobierz ze Sklepu</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../niko-19/"><img src="../assets/ikona-torpedo.png?v=3" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../niko-19/">Niko 19</a></h3><p>Codzienny trening dla dzieci z diamencikami, rangami, testem sprawności i radami o jedzeniu sportowca.</p></div>
+          <div class="t-btns"><a class="btn" href="https://play.google.com/apps/testing/pl.leokodum.niko19" target="_blank" rel="noopener">Zostań testerem</a><a class="btn ghost" href="https://play.google.com/store/apps/details?id=pl.leokodum.niko19" target="_blank" rel="noopener">Pobierz ze Sklepu</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../kids-locknet/"><img src="../assets/ikona-kidslocknet.png?v=1" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../kids-locknet/">Kids LockNet</a></h3><p>Blokada internetu i hotspotu na telefonie dziecka, odblokowanie tylko PIN-em rodzica.</p></div>
+          <div class="t-btns"><a class="btn" href="https://play.google.com/apps/testing/pl.leokodum.kidslocknet" target="_blank" rel="noopener">Zostań testerem</a><a class="btn ghost" href="https://play.google.com/store/apps/details?id=pl.leokodum.kidslocknet" target="_blank" rel="noopener">Pobierz ze Sklepu</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../opp-assist/"><img src="../assets/ikona-opp.png?v=2" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../opp-assist/">OPP Assist</a></h3><p>Pilnuje średniej prędkości na odcinkowym pomiarze prędkości.</p></div>
+          <div class="t-btns"><a class="btn ghost" href="mailto:leokodum@mail.com?subject=OPP Assist%20-%20chc%C4%99%20testowa%C4%87">Napisz, by testować</a></div>
+        </div>
+        <div class="t-app">
+          <a href="../styl-jazdy/"><img src="../assets/ikona-styljazdy.png?v=1" alt="" width="72" height="72"></a>
+          <div class="t-txt"><h3><a href="../styl-jazdy/">Styl Jazdy</a></h3><p>Ocena stylu jazdy kierowców w rodzinie lub firmie w skali 0–100.</p></div>
+          <div class="t-btns"><a class="btn ghost" href="mailto:leokodum@mail.com?subject=Styl Jazdy%20-%20chc%C4%99%20testowa%C4%87">Napisz, by testować</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 LeoKodum · <a href="mailto:leokodum@mail.com">leokodum@mail.com</a> · <a href="tel:+48884322324">+48 884 322 324</a> · <a href="https://www.facebook.com/leokodum" target="_blank" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
