@@ -264,8 +264,8 @@ APLIKACJE = [
         "uwaga": "Wyniki pomiarów z telefonu są orientacyjne. Aplikacja będzie płatna w subskrypcji, z 7 dniami za darmo na start.",
     },
     {
-        "slug": "skaner-sieci", "pakiet": "", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
-        "status": "przygotowanie",
+        "slug": "skaner-sieci", "pakiet": "pl.leokodum.skanersieci", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
+        "status": "wewnetrzny",
         "krotko": "Urządzenia w sieci, stan Wi-Fi, możliwe zagrożenia i raport PDF.",
         "zrzuty": zrzuty("skaner-sieci/sklep", [
             ("1-siec.png", "Urządzenia w sieci"), ("2-ryzyka.png", "Zagrożenia i zalecenia"),
