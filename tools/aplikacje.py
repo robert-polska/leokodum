@@ -159,7 +159,7 @@ APLIKACJE = [
     },
     {
         "slug": "matlogika", "pakiet": "pl.leokodum.matlogika", "nazwa": "Matlogika", "tag": "Dla uczniów klas 1–8", "ikona": "ikona-matlogika.png?v=1",
-        "status": "przygotowanie",
+        "status": "sprawdzanie",
         "krotko": "Matematyka i logika bez końca: zadania, ixcoiny, rangi i codzienna skrzynia.",
         "wstep": "Matematyka i logika dla szkoły podstawowej, która nie ma mety. Zadania płyną bez końca, trudność dopasowuje się do dziecka, a za dobre rozwiązania są ixcoiny i coraz wyższe rangi.",
         "zrzuty": zrzuty("matlogika/sklep", [
