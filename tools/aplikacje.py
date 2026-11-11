@@ -158,6 +158,41 @@ APLIKACJE = [
         "uwaga": "To zabawa inspirowana testami inteligencji. Wynik nie jest diagnozą ani prawdziwym pomiarem IQ.",
     },
     {
+        "slug": "matlogika", "pakiet": "pl.leokodum.matlogika", "nazwa": "Matlogika", "tag": "Dla uczniów klas 1–8", "ikona": "ikona-matlogika.png?v=1",
+        "status": "przygotowanie",
+        "krotko": "Matematyka i logika bez końca: zadania, ixcoiny, rangi i codzienna skrzynia.",
+        "wstep": "Matematyka i logika dla szkoły podstawowej, która nie ma mety. Zadania płyną bez końca, trudność dopasowuje się do dziecka, a za dobre rozwiązania są ixcoiny i coraz wyższe rangi.",
+        "zrzuty": zrzuty("matlogika/sklep", [
+            ("1-start.png", "Ekran główny: ranga, seria dni, cel dnia"), ("2-geometria.png", "Geometria z rysunkiem"),
+            ("3-zagadka.png", "Zagadka, trudne zadanie za podwójną nagrodę"), ("4-kwadrat.png", "Kwadrat magiczny, ciemny motyw"),
+            ("5-rangi.png", "Rangi"), ("6-ciekawostki.png", "Kolekcja ciekawostek"),
+        ]),
+        "sekcje": [
+            ("Siedem tematów", [
+                "Działania, ułamki, procenty, geometria z rysunkami, zadania tekstowe, ciągi oraz zagadki i łamigłówki.",
+                "Zadania są generowane, więc za każdym razem są inne. Program sięga od klasy 1 do klasy 8.",
+            ]),
+            ("Dopasowuje się do dziecka", [
+                "Na starcie dziecko podaje wiek, a potem trudność ustawia się sama: dobre odpowiedzi podnoszą poziom, a pomyłki go obniżają.",
+                "Mniej więcej co czwarte zadanie jest trudniejsze i warte podwójnie.",
+            ]),
+            ("Ixcoiny i rangi", [
+                "+1 ixcoin za zadanie, +2 za trudne, bonusy za serię bez pomyłki i za nowy poziom.",
+                "Podpowiedzi w trzech stopniach kosztują 1, 2 i 3 ixcoiny.",
+                "20 rang, skrzynia dnia rosnąca z każdym kolejnym dniem i cel dnia: 15 zadań.",
+            ]),
+            ("Lektor i ciekawostki", [
+                "Za cel dnia jest ciekawostka „Czy wiesz, że…” czytana przez lektora, z muzyką. Ciekawostki trafiają do kolekcji.",
+                "Gdy zadanie się nie uda, Marta tłumaczy, jak się rozwiązuje takie zadania.",
+            ]),
+            ("Dla rodzica", [
+                "Bez reklam, bez zakupów w aplikacji, bez internetu.",
+                "Nie zbiera żadnych danych i nie wymaga uprawnień.",
+            ]),
+        ],
+        "uwaga": "Ixcoiny to punkty w grze: nie da się ich kupić ani wymienić na pieniądze. Lektor i muzyka są zapisane w aplikacji, więc działa bez internetu.",
+    },
+    {
         "slug": "niko-19", "pakiet": "pl.leokodum.niko19", "nazwa": "Niko 19", "tag": "Dla młodych sportowców", "ikona": "ikona-torpedo.png?v=3",
         "status": "test", "kwadratowe": True,
         "krotko": "Codzienny trening dla dzieci z diamencikami, rangami, testem sprawności i radami o jedzeniu sportowca.",
