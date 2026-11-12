@@ -14,8 +14,8 @@ def zrzuty(katalog, pliki):
 
 APLIKACJE = [
     {
-        "slug": "opp-assist", "pakiet": "com.robsoft.oppassist", "nazwa": "OPP Assist", "tag": "Dla kierowców", "ikona": "ikona-opp.png?v=2",
-        "status": "wewnetrzny",
+        "slug": "opp-assist", "pakiet": "pl.leokodum.oppassist", "nazwa": "OPP Assist", "tag": "Dla kierowców", "ikona": "ikona-opp.png?v=2",
+        "status": "test",
         "krotko": "Pilnuje średniej prędkości na odcinkowym pomiarze prędkości.",
         "zrzuty": zrzuty("opp-assist/sklep", [
             ("1-ready.png", "Gotowy do jazdy, wybrany limit"), ("2-approach.png", "Sygnał przed odcinkiem"),
@@ -99,8 +99,9 @@ APLIKACJE = [
                 "<strong>Balony:</strong> kolorowe balony z buziami do przebijania, zanim odlecą.",
             ]),
             ("Nagrody i postępy", [
-                "Za każdy nowy poziom „BRAWO!”, fanfara, fajerwerki, tańczący lew i naklejka do albumu (40 do zebrania).",
-                "10 rang do zdobycia, a za awans nowe awatary.",
+                "Za każdy nowy poziom „BRAWO!”, fanfara, fajerwerki i tańczący lew.",
+                "Album 80 naklejek: każda kolejna wymaga więcej poziomów, a kropki pokazują, ile zostało do następnej.",
+                "20 rang do zdobycia i 22 awatary, nowe za kolejne rangi.",
                 "Rekord poziomu w każdym trybie zabawy.",
             ]),
             ("Coraz ciekawiej", [
@@ -196,7 +197,7 @@ APLIKACJE = [
         "slug": "niko-19", "pakiet": "pl.leokodum.niko19", "nazwa": "Niko 19", "tag": "Dla młodych sportowców", "ikona": "ikona-torpedo.png?v=3",
         "status": "test", "kwadratowe": True,
         "krotko": "Codzienny trening dla dzieci z diamencikami, rangami, testem sprawności i radami o jedzeniu sportowca.",
-        "wstep": "Codzienny trening dla młodych sportowców. Krótkie ćwiczenia jedno po drugim, pokazane przez trójwymiarową postać Niko. Za każdy trening dziecko zbiera diamenciki, rangi i nowe awatary, a co dwa tygodnie sprawdza w teście sprawności, ile już potrafi.",
+        "wstep": "Codzienny trening dla młodych sportowców. Krótkie ćwiczenia jedno po drugim, każde z obrazkiem pokazującym poprawną technikę. Za każdy trening dziecko zbiera diamenciki, rangi i nowe awatary, a co dwa tygodnie sprawdza w teście sprawności, ile już potrafi.",
         "zrzuty": zrzuty("niko-19/zrzuty", [
             ("1-start.png", "Ekran główny: ranga, seria dni i cel tygodnia"),
             ("2-test-sprawnosci.png", "Test sprawności z wykresem postępu"),
@@ -206,9 +207,9 @@ APLIKACJE = [
         "sekcje": [
             ("Trening krok po kroku", [
                 "Aplikacja prowadzi przez kolejne ćwiczenia: przysiady, pompki, deski, wykroki, skoki, mostki i biegi bokiem.",
-                "Każde ćwiczenie pokazuje postać Niko w trójwymiarowej grafice, więc od razu widać, jak je zrobić.",
+                "Każde ćwiczenie ma obrazek z poprawną techniką, więc od razu widać, jak je zrobić.",
                 "Przy każdym ćwiczeniu odliczanie czasu i podpowiedź, co będzie dalej.",
-                "Dodatkowy trening tego samego dnia też się liczy, za połowę diamencików.",
+                "Drugi trening tego samego dnia daje połowę diamencików, a kolejne liczą się już tylko do formy.",
             ]),
             ("Motywacja", [
                 "Diamenciki za każdy zaliczony trening i mnożnik za serię dni.",
@@ -216,7 +217,7 @@ APLIKACJE = [
                 "Awatary do odblokowania za zebrane diamenciki.",
             ]),
             ("Test sprawności", [
-                "Co 14 dni krótki test: przysiady i pompki na kolanach w 30 sekund oraz deska na czas.",
+                "Co 14 dni krótki test: przysiady i pompki na kolanach w 30 sekund oraz deska na czas, mierzona przez aplikację.",
                 "Rekordy i wykres ostatnich wyników pokazują postęp.",
                 "Dziecko porównuje się tylko ze sobą, bez rankingów i porównań z innymi.",
             ]),
@@ -272,7 +273,7 @@ APLIKACJE = [
     },
     {
         "slug": "styl-jazdy", "pakiet": "pl.leokodum.styljazdy", "nazwa": "Styl Jazdy", "tag": "Dla kierowców", "ikona": "ikona-styljazdy.png?v=1",
-        "status": "wewnetrzny",
+        "status": "test",
         "krotko": "Ocena stylu jazdy kierowców w rodzinie lub firmie w skali 0–100.",
         "wstep": "Wybierz, kto jedzie, i ruszaj. Styl Jazdy ocenia przyspieszanie, hamowanie, zakręty, płynność i tempo, a potem porównuje kierowców w rodzinie lub firmie.",
         "sekcje": [
@@ -300,29 +301,35 @@ APLIKACJE = [
     },
     {
         "slug": "skaner-sieci", "pakiet": "pl.leokodum.skanersieci", "nazwa": "Skaner Sieci", "tag": "Dla domu i instalatorów", "ikona": "ikona-skanersieci.png?v=1",
-        "status": "wewnetrzny",
+        "status": "test",
         "krotko": "Urządzenia w sieci, stan Wi-Fi, możliwe zagrożenia i raport PDF.",
         "zrzuty": zrzuty("skaner-sieci/sklep", [
             ("1-siec.png", "Urządzenia w sieci"), ("2-ryzyka.png", "Zagrożenia i zalecenia"),
             ("3-wifi.png", "Sieci Wi-Fi i kanały"), ("4-zdrowie.png", "Zdrowie sieci"), ("5-czuwanie.png", "Czuwanie"),
         ]),
-        "wstep": "Pokazuje, co jest w Twojej sieci: urządzenia, ich nazwy i otwarte usługi. Sprawdza Wi-Fi, wskazuje możliwe zagrożenia i przygotowuje raport PDF.",
+        "wstep": "Pokazuje, co jest w Twojej sieci: urządzenia, ich nazwy i otwarte usługi. Wskazuje możliwe zagrożenia i podpowiada, co poprawić, sprawdza Wi-Fi i połączenie z internetem, a w tle może czuwać nad siecią.",
         "sekcje": [
             ("Urządzenia w sieci", [
                 "Skan całej sieci lokalnej w kilkadziesiąt sekund.",
-                "Nazwy i rodzaje urządzeń: drukarki, kamery, telewizory, routery i inne.",
-                "Historia skanów i porównanie, co doszło, a co zniknęło.",
+                "Nazwy, producenci i rodzaje urządzeń: routery, drukarki, kamery, telewizory, NAS i inne.",
+                "Własne opisy urządzeń i historia skanów: co doszło, a co zniknęło.",
             ]),
-            ("Wi-Fi", [
-                "Sieci w okolicy, ich siła sygnału i kanały.",
-                "Wykres kanałów, który pomaga wybrać mniej zatłoczony kanał.",
+            ("Zagrożenia i zalecenia", [
+                "Kamery i panele dostępne z internetu oraz porty otwarte w routerze przez UPnP.",
+                "Usługi bez hasła lub bez szyfrowania, możliwy konflikt adresów IP i drugi router w sieci.",
+                "Przy każdym ustaleniu zalecenie, co zrobić.",
             ]),
-            ("Bezpieczeństwo i zdrowie sieci", [
-                "Wskazuje możliwe zagrożenia, np. usługi dostępne bez hasła.",
-                "Sprawdza połączenie z internetem i trasę do niego.",
+            ("Wi-Fi i zdrowie sieci", [
+                "Sieci w okolicy, siła sygnału i wykres kanałów, który pomaga wybrać mniej zatłoczony kanał.",
+                "Opóźnienia do routera i do internetu, DNS, DHCP, podwójny NAT i CGNAT.",
             ]),
-            ("Czuwanie i raporty", [
-                "Czuwanie w tle daje znać, gdy w sieci pojawi się nowe urządzenie.",
+            ("Czuwanie", [
+                "Co 15, 30 albo 60 minut sprawdza sieć i daje znać o nowym urządzeniu, z jego nazwą i producentem.",
+                "Urządzenia oznaczone jako znane nie są zgłaszane.",
+                "Cisza nocna zbiera zdarzenia z nocy w jedno poranne powiadomienie.",
+            ]),
+            ("Narzędzia i raporty", [
+                "Przy każdym urządzeniu: ping z wykresem, trasa, test portu i Wake-on-LAN.",
                 "Raport PDF i eksport do CSV, np. dla klienta po montażu.",
             ]),
         ],
