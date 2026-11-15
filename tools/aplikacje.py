@@ -2,7 +2,7 @@
 status: test (test zamknięty, grupa testerów), sprawdzanie (u Google), wewnetrzny (testy
 wewnętrzne, lista e-mail), przygotowanie. pakiet: identyfikator w Google Play (strona /testuj/). Zrzuty: ścieżki od katalogu repo, 9:16."""
 
-GRUPA = "https://groups.google.com/g/testerzy-leokodum"
+GRUPA = "https://groups.google.com/g/testerzy-leokodum/about"
 MAIL = "leokodum@mail.com"
 TEL = "+48 884 322 324"
 TEL_LINK = "+48884322324"

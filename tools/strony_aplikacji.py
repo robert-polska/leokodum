@@ -220,7 +220,7 @@ def testuj():
         <span class="nr">1</span>
         <div>
           <h2>Dołącz do grupy testerów</h2>
-          <p>Otwórz grupę w Chrome, na swoim koncie Google, i kliknij „Dołącz do grupy”. Jeśli widzisz komunikat o braku dostępu, najpierw zaloguj się na konto Google.</p>
+          <p>Otwórz grupę w Chrome, na swoim koncie Google, i kliknij „Dołącz do grupy”. Jeśli widzisz komunikat o braku dostępu, najpierw zaloguj się na konto Google. Jeśli przycisku nie ma, bo już jesteś w grupie, przejdź od razu do kroku 2. Grupa służy tylko do testów, wszystkie aplikacje są niżej na tej stronie.</p>
           <a class="btn" href="{GRUPA}" target="_blank" rel="noopener">Dołącz do grupy</a>
         </div>
       </div>
