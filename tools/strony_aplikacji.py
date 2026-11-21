@@ -2,6 +2,7 @@
 """Generuje podstrony aplikacji (<slug>/index.html) z danych w tools/aplikacje.py.
 Uruchom z katalogu repo: python3 tools/strony_aplikacji.py"""
 import html
+import json
 import os
 import sys
 
@@ -10,6 +11,33 @@ from aplikacje import APLIKACJE, GRUPA, MAIL, TEL, TEL_LINK  # noqa: E402
 
 KORZEN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 e = html.escape
+ADRES = "https://leokodum.pl/"
+# Strony, których nie ma jeszcze na głównej — nie trafiają do sitemap.xml.
+UKRYTE = {"matlogika"}
+GRY = {"kafelki", "test-iq", "matlogika"}
+
+
+def seo(url, opis, obraz, ld=None, duzy=False):
+    """Canonical, Open Graph i dane strukturalne do <head>."""
+    ld_html = f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ""
+    return f"""<link rel="canonical" href="{url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LeoKodum">
+<meta property="og:url" content="{url}">
+<meta property="og:description" content="{e(opis)}">
+<meta property="og:image" content="{obraz}">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="{'summary_large_image' if duzy else 'summary'}">{ld_html}"""
+
+
+def seo_app(app):
+    url = f"{ADRES}{app['slug']}/"
+    ikona = ADRES + "assets/" + app["ikona"].split("?")[0]
+    ld = {"@context": "https://schema.org", "@type": "MobileApplication", "name": app["nazwa"],
+          "description": app["krotko"], "url": url, "image": ikona, "operatingSystem": "Android",
+          "applicationCategory": "GameApplication" if app["slug"] in GRY else "UtilitiesApplication",
+          "inLanguage": "pl", "author": {"@type": "Organization", "name": "LeoKodum", "url": ADRES}}
+    return f'<meta property="og:title" content="{e(app["nazwa"])} — LeoKodum">\n' + seo(url, app["krotko"], ikona, ld)
 
 
 def sekcje(app):
@@ -89,6 +117,7 @@ def strona(app):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(app['nazwa'])} — LeoKodum</title>
 <meta name="description" content="{e(app['krotko'])}">
+{seo_app(app)}
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="stylesheet" href="../assets/style.css?v=8">
 </head>
@@ -172,6 +201,8 @@ def testuj():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zostań testerem — LeoKodum</title>
 <meta name="description" content="Sprawdź aplikacje LeoKodum przed premierą w Google Play. Dołącz do grupy testerów i pobierz aplikacje.">
+<meta property="og:title" content="Zostań testerem — LeoKodum">
+{seo(ADRES + "testuj/", "Sprawdź aplikacje LeoKodum przed premierą w Google Play.", ADRES + "assets/og-leokodum.png", duzy=True)}
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="stylesheet" href="../assets/style.css?v=8">
 <script>
@@ -275,3 +306,10 @@ for app in APLIKACJE:
     with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
         f.write(strona(app))
     print("ok", app["slug"])
+
+with open(os.path.join(KORZEN, "sitemap.xml"), "w", encoding="utf-8") as f:
+    adresy = [ADRES, ADRES + "testuj/"] + [f"{ADRES}{a['slug']}/" for a in APLIKACJE if a["slug"] not in UKRYTE]
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+    f.writelines(f"  <url><loc>{u}</loc></url>\n" for u in adresy)
+    f.write("</urlset>\n")
+print("ok sitemap.xml")
