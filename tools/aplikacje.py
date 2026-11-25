@@ -3,6 +3,8 @@ status: test (test zamknięty, grupa testerów), sprawdzanie (u Google), wewnetr
 wewnętrzne, lista e-mail), przygotowanie. pakiet: identyfikator w Google Play (strona /testuj/). Zrzuty: ścieżki od katalogu repo, 9:16."""
 
 GRUPA = "https://groups.google.com/g/testerzy-leokodum/about"
+# Zgłoszenia do testów (Formularz Google na koncie LeoKodum, zbiera zweryfikowany adres konta Google)
+FORMULARZ = "https://docs.google.com/forms/d/e/1FAIpQLSd1Bbr5Vi16ea9eRQMGxrsRrHzWg1b1k4rmXl7nEIobA3SL-Q/viewform"
 MAIL = "leokodum@mail.com"
 TEL = "+48 884 322 324"
 TEL_LINK = "+48884322324"

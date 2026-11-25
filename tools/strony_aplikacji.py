@@ -7,7 +7,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from aplikacje import APLIKACJE, GRUPA, MAIL, TEL, TEL_LINK  # noqa: E402
+from aplikacje import APLIKACJE, FORMULARZ, MAIL, TEL, TEL_LINK  # noqa: E402
 
 KORZEN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 e = html.escape
@@ -95,7 +95,7 @@ def status(app):
     akcja = ""
     if s == "test":
         akcja = '<a class="btn" href="../testuj/">Zostań testerem</a>'
-        tekst = "Trwa test zamknięty w Google Play. Dołącz do grupy testerów i pobierz aplikację przed premierą."
+        tekst = "Trwa test zamknięty w Google Play. Zgłoś się do testów i pobierz aplikację przed premierą."
     elif s == "sprawdzanie":
         akcja = '<a class="btn" href="../testuj/">Dołącz do testerów</a>'
         tekst = "Aplikacja jest sprawdzana przez Google. Potem trafi do testów w grupie testerów."
@@ -200,7 +200,7 @@ def testuj():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zostań testerem — LeoKodum</title>
-<meta name="description" content="Sprawdź aplikacje LeoKodum przed premierą w Google Play. Dołącz do grupy testerów i pobierz aplikacje.">
+<meta name="description" content="Sprawdź aplikacje LeoKodum przed premierą w Google Play. Zgłoś się do testów i pobierz aplikacje.">
 <meta property="og:title" content="Zostań testerem — LeoKodum">
 {seo(ADRES + "testuj/", "Sprawdź aplikacje LeoKodum przed premierą w Google Play.", ADRES + "assets/og-leokodum.png", duzy=True)}
 <link rel="icon" type="image/png" href="../assets/favicon.png">
@@ -250,16 +250,17 @@ def testuj():
       <div class="step">
         <span class="nr">1</span>
         <div>
-          <h2>Dołącz do grupy testerów</h2>
-          <p>Otwórz grupę w Chrome, na swoim koncie Google, i kliknij „Dołącz do grupy”. Jeśli widzisz komunikat o braku dostępu, najpierw zaloguj się na konto Google. Jeśli przycisku nie ma, bo już jesteś w grupie, przejdź od razu do kroku 2. Grupa służy tylko do testów, wszystkie aplikacje są niżej na tej stronie.</p>
-          <a class="btn" href="{GRUPA}" target="_blank" rel="noopener">Dołącz do grupy</a>
+          <h2>Zgłoś się do testów</h2>
+          <p>Otwórz zgłoszenie w Chrome, zalogowany tym samym kontem Google, którego używasz w Sklepie Play na telefonie, zaznacz zgodę i wyślij. Wpisywać nic nie trzeba: zapisujemy tylko adres tego konta. Dopiszemy Cię do testów wszystkich naszych aplikacji, zwykle w ciągu doby. Jeśli już testujesz którąś z nich, przejdź od razu do kroku 2.</p>
+          <a class="btn" href="{FORMULARZ}" target="_blank" rel="noopener">Zgłoś się do testów</a>
+          <p class="muted">Adres konta Google służy tylko do dodania Cię do testów w Google Play i nie trafia nigdzie indziej. Usunięcie: napisz na <a href="mailto:{MAIL}">{MAIL}</a>.</p>
         </div>
       </div>
       <div class="step">
         <span class="nr">2</span>
         <div>
           <h2>Wybierz aplikację</h2>
-          <p>Przy wybranej aplikacji kliknij „Zostań testerem”, a potem „Pobierz ze Sklepu”. Gdy Sklep jeszcze jej nie pokazuje, odczekaj kilka minut po dołączeniu do grupy.</p>
+          <p>Gdy dopiszemy Cię do testów, przy wybranej aplikacji kliknij „Zostań testerem”, a potem „Pobierz ze Sklepu”. Aplikacji w teście nie da się znaleźć wyszukiwarką Sklepu, tylko przez te przyciski.</p>
         </div>
       </div>
       <div class="step">
