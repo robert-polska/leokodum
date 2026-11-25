@@ -335,4 +335,34 @@ APLIKACJE = [
         ],
         "uwaga": "Skanuj tylko sieci, którymi zarządzasz lub na które masz zgodę właściciela.",
     },
+    {
+        "slug": "minus34", "pakiet": "pl.leokodum.minus34", "nazwa": "Minus 34", "tag": "Gra zręcznościowa", "ikona": "ikona-minus34.png?v=1",
+        "status": "test",
+        "krotko": "Strzelanka z widokiem z góry: agent Kret zjeżdża 34 poziomy pod ziemię, żeby wyłączyć Rdzeń.",
+        "zrzuty": zrzuty("minus34/sklep", [
+            ("1-boss.png", "Strażnik szybu: Mech-Strażnik na poziomie -8"), ("2-poziom.png", "Poziom -5: walka z ochroną"),
+            ("3-historia.png", "Wstęp: Rdzeń na dnie Ośrodka Zenit"), ("4-tytul.png", "Ekran tytułowy"),
+            ("5-winda.png", "Winda i radio z Bazy"), ("6-zasady.png", "Zasady z lektorem: znajdźki"),
+        ]),
+        "wstep": "Ośrodek Zenit milczy od 72 godzin. Agent Kret zjeżdża 34 poziomy pod ziemię, żeby wyłączyć Rdzeń — maszynę, która uczy się od ludzi. Strzelanka z widokiem z góry w duchu starych automatów, sterowana jednym kciukiem.",
+        "sekcje": [
+            ("Jeden kciuk", [
+                "Joystick w panelu pod planszą, palec nie zasłania akcji.",
+                "Broń celuje i strzela sama — ty wybierasz, gdzie stanąć, kiedy zrobić zryw i rzucić bombę.",
+            ]),
+            ("34 poziomy w dół", [
+                "Na każdym piętrze karta dostępu, bez niej winda nie ruszy. Radar i strzałka wskażą drogę.",
+                "Biura, laboratoria, hale maszyn, komory izolacji i Rdzeń — każdy sektor ma swoich wrogów.",
+            ]),
+            ("Strażnicy szybu", [
+                "Mech-Strażnik, Królowa Roju, Prototyp X i sam Rdzeń.",
+                "Po każdym bossie punkt kontrolny i więcej zdrowia.",
+            ]),
+            ("Historia z lektorem", [
+                "Wstęp i zasady czytane przez lektora, radio z Bazy w każdej windzie.",
+                "Pikselowa grafika i muzyka jak z automatu.",
+            ]),
+        ],
+        "uwaga": "Bez reklam, bez zakupów w aplikacji, bez internetu. PEGI 7.",
+    },
 ]

@@ -14,7 +14,7 @@ e = html.escape
 ADRES = "https://leokodum.pl/"
 # Strony, których nie ma jeszcze na głównej — nie trafiają do sitemap.xml.
 UKRYTE = {"matlogika"}
-GRY = {"kafelki", "test-iq", "matlogika"}
+GRY = {"kafelki", "test-iq", "matlogika", "minus34"}
 
 
 def seo(url, opis, obraz, ld=None, duzy=False):
